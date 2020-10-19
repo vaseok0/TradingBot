@@ -1,0 +1,220 @@
+﻿@model TradingBot.Models.BObot
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/stylecabinet.css">
+    <link rel="stylesheet" href="~/css/general.css">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div class="wraper">
+        <div class="content">
+            <div class="hi">
+                <div class="container">
+                    <div class="hi__row">
+                        <div class="hi__img">
+                            <img src="~/img/robot.png" alt="robot">
+                        </div>
+                        <div class="hi__body">
+                            <div id="display" class="hi__title">Точка входа в ринок</div>
+                            <table id="results" class="signal">
+                                <tr>
+                                    <td id="casc">@Model.Valute</td>
+                                </tr>
+                                <tr>
+                                    <td id="casc">@Model.Side</td>
+                                    <td id="casc">@Model.Frame</td>
+                                </tr>
+                                <tr>
+                                    <td class="clock">Время входа в зделку @DateTime.Now.ToString("hh:mm")</td>
+                                </tr>
+                            </table>
+                            <input id="reload" type="submit" onclick="this.style.display='none';"/>
+                        </div>
+                        <script>
+                            function show() {
+                                $.ajax({
+                                    url: "/home/cabinet",
+                                    success: function (html) {
+                                        $('body').html(html);
+                                    }
+                                });
+                            }
+ 
+
+
+                            $(function () {
+                                $('#reload').bind('click', function () {
+                                    setTimeout(show, 10000);
+                                });
+                            });
+
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="list__brokers">
+                <div class="container">
+                    <div class="list__title title">Список Проверених брокеров БО</div>
+                    <div class="list__body">
+                        <div class="list__row">
+                            <div class="list__column">
+                                <div class="list__item">
+                                    <div class="list__title">Брокер</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="list__title">Депозит <span>min/max</span></div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="list__title">Мобильний</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="list__title">Рейтинг</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="list__title">Бонус</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="list__title">Зарегистрироватся</div>
+                                </div>
+                            </div>
+                            <div class="list__column items">
+                                <div class="brocker">
+                                    <div class="name__brocker">
+                                        <a href="">
+                                            <img id="photo" src="~/img/iqoption.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="deposit">10$/∞</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="mobile">Есть</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="rating">6.1</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="bonus">100%</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="link__site"><a class="link__btn" href="#">Перейти на сайт</a></div>
+                                </div>
+                            </div>
+                            <div class="list__column items">
+                                <div class="brocker">
+                                    <div class="name__brocker">
+                                        <a href="">
+                                            <img id="photo" src="~/img/binomo.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="deposit">10$/∞</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="mobile">Есть</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="rating">9.6</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="bonus">100%</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="link__site"><a class="link__btn" href="#">Перейти на сайт</a></div>
+                                </div>
+                            </div>
+                            <div class="list__column items">
+                                <div class="brocker">
+                                    <div class="name__brocker">
+                                        <a href="">
+                                            <img id="photo" src="~/img/binance.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="deposit">10$/∞</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="mobile">Нет</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="rating">9.1</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="bonus">100%</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="link__site"><a class="link__btn" href="">Перейти на сайт</a></div>
+                                </div>
+                            </div>
+                            <div class="list__column items">
+                                <div class="brocker">
+                                    <div class="name__brocker">
+                                        <a href="">
+                                            <img id="photo" src="~/img/olymptrade.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="deposit">10$/∞</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="mobile">Есть</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="rating">8.9</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="bonus">100%</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="link__site"><a class="link__btn" href="">Перейти на сайт</a></div>
+                                </div>
+                            </div>
+                            <div class="list__column items">
+                                <div class="brocker">
+                                    <div class="name__brocker">
+                                        <a href="">
+                                            <img id="photo" src="~/img/pocket.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="deposit">5$/∞</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="mobile">Нет</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="rating">9.3</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="bonus">50$</div>
+                                </div>
+                                <div class="brocker">
+                                    <div class="link__site"><a class="link__btn" href="">Перейти на сайт</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__about"><p>© 2020-2021  · <a href="#">Privacy</a></p></div>
+                <div class="footer__contact"><p>По всем вопросам писать сюда:</p><a>Help@mail.com</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

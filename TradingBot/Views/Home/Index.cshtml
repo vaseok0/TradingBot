@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/Style.css">
+    <link rel="stylesheet" href="~/css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="hi">
+                <div class="container">
+                    <div class="hi__row">
+                        <div class="hi__body">
+                            <div class="hi__title">Привет, друг я BObot)</div>
+                            <ul class="hi__list">
+                                <li>Я бот для торговли на Б.О.</li>
+                                <li>Только я могу анализировать рынок по двум алгоритмам сразу</li>
+                                <li>Со мной тебе не нужно тратить время на изучение рынка</li>
+                                <li>Начни менять свою жизнь вместе со мной</li>
+                                <li>Начни торговать вместе со мной уже сегодня!!!</li>
+                            </ul>
+                        </div>
+                        <div class="hi__img">
+                            <img src="~/img/robot.png" alt="bot__image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="what">
+                <div class="container">
+                    <div class="what__row">
+                        <div class="what__image">
+                            <img src="~/img/robot.png" alt="grafic">
+                        </div>
+                        <div class="what__body">
+                            <div class="what__titile title">
+                                Кто такой BObot?
+                            </div>
+                            <div class="what__text">
+                                <p>BObot не торгует за вас он только показывает вам когда, куда и на сколько открывать зделку.</p>
+                                <p>BObot не требует загрузки!!!</p>
+                                <p>BObot анализирует рынок сразу по двум алгоритмам которые:</p>
+                                <ol>
+                                    <li>Aлгоритм собирает в себя показатели всех Фундаментальных индикаторов.</li>
+                                    <li>B свою очередь собирает данные с 24-х индикаторов.</li>
+                                </ol>
+                                <p>И этого вполне достаточно, чтобы давать вам <span>60% / 90%</span> прибыльных сигналов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment">
+                <div class="container">
+                    <div id="link_title" class="payment__title title">Покупка</div>
+                    <div class="payment__body">
+                        <div class="payment__row">
+                            <div class="payment__column">
+                                <div class="payment__item">
+                                    <div class="payment__subtitle">EXPRESS</div>
+                                    <div class="payment__label">$5<span>/ в неделю</span></div>
+                                    <div class="payment__text">
+                                        <ul>
+                                            <li>Колличество сигналов не ограничено</li>
+                                            <li>Фрейм сигналов 5-60 минут</li>
+                                            <li>Колличество валютних пар (6)</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="payment__btn">Купить</a>
+                                </div>
+                            </div>
+                            <div class="payment__column">
+                                <div class="payment__item">
+                                    <div class="payment__subtitle">Normal</div>
+                                    <div class="payment__label">$15<span>/в месяц</span></div>
+                                    <div class="payment__text">
+                                        <ul>
+                                            <li>Колличество сигналов не ограничено</li>
+                                            <li>Фрейм сигналов 5-60 минут</li>
+                                            <li>колличество валютних пар (8)</li>
+                                            <li>Рекомендуемая сумма депозита 20$</li>
+                                            <li>возможно добавление криптовалютних пар</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="payment__btn">Купить</a>
+                                </div>
+                            </div>
+                            <div class="payment__column">
+                                <div class="payment__item">
+                                    <div class="payment__subtitle">Profesional</div>
+                                    <div class="payment__label">$50<span>/в месяц</span></div>
+                                    <div class="payment__text">
+                                        <ul>
+                                            <li>Колличество сигналов не ограничено</li>
+                                            <li>Фрейм сигналов 5-60 минут</li>
+                                            <li>Настройка манименеджмента исходя из вашего депозита</li>
+                                            <li>Автоматический подбор более преспектиних пар</li>
+                                            <li>Комментарии с объяснением входа в зделку</li>
+                                            <li>Еженедельный анализ всех открытых зделок с дальнейшем совершенствованием BObot</li>
+                                        </ul>
+                                    </div>
+                                    <a href="" class="payment__btn" asp-controller="Home" asp-action="Cabinet">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__about"><p>© 2020-2021  · <a href="#">Privacy</a></p></div>
+                    <div class="footer__contact"><p>По всем вопросам писать сюда:</p><a>Help@mail.com</a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
